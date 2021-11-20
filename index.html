@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Card Effect</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .box-img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+        .box-img img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transform: rotate(0deg);
+            transform-origin: 95% 50% 0;
+            transition: all 0.5s ease-in-out 0s;
+        }
+        .box:hover img{
+            transform: rotate(-140deg);
+        }
+        .box-img:after{
+            content: "";
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            top: 50%;
+            left: 95%;
+            border-radius: 50%;
+            background-color: black;
+        }
+        .box-contant{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: tomato;
+            color: #fff;
+            border-radius: 50%;
+            padding: 50px 30px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box-img">
+            <img src="ej.jpg" alt="">
+        </div>
+        <div class="box-contant">
+            <h2>Web designer</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, doloremque!</p>
+        </div>
+    </div>
+    
+</body>
+</html>
